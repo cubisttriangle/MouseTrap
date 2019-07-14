@@ -8,6 +8,8 @@
 namespace Util
 {
 
+// Credit: https://stackoverflow.com/questions/17261798/converting-a-hex-string-to-a-byte-array
+
 int charToInt( char input )
 {
     if ( input >= '0' && input <= '9' )
