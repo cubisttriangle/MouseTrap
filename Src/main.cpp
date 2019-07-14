@@ -11,7 +11,7 @@
 
 void SendSourceReadyMsg( const char* destIp )
 {
-    // SESSION READY message from Vincents laptop.
+    // SESSION READY message.
     std::string sessionReadyMsg = "003B010100001C560069006E00630065006E0074002D004C006100700074006F0070000200021C440300108E0F87AFF5D8084997DAC9208FEA8475";
 
     Socket miceSock( destIp, MICE_PORT, SOCK_STREAM );
@@ -123,14 +123,14 @@ int main( int argc, char** argv )
 {
     if ( argc != 4 )
     {
-        std::cerr << "Expecting 3 arguments: (1) IP address (2) Pod name (3) hostname"
+        std::cerr << "Expecting 3 arguments: (1) IP address (2) Display name (3) hostname"
                   << std::endl;
         return 1;
     }
 
     const char* ip = argv[1];          // Ex: 192.168.3.103
-    const char* displayName = argv[2]; // Ex: VPod
-    const char* hostName = argv[3];    // Ex: android-5d0b32ce6ed947cb
+    const char* displayName = argv[2]; // Ex: MyDisplay
+    const char* hostName = argv[3];    // Ex: myhost
 
     SendSourceReadyMsg( ip );
 
