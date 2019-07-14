@@ -15,9 +15,6 @@
 #include <netinet/tcp.h>
 #include <sys/socket.h>
 
-#define MICE_PORT 7250
-#define RECV_BUF_SZ 8192
-
 void toss( const std::string& ctx, int err )
 {
     std::stringstream ss;
